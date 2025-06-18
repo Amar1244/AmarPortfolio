@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; background-color: #007bff; color: white; padding: 10px 20px; }
+        .navbar .name { font-size: 20px; font-weight: bold; }
+        .navbar .nav-links a { color: white; text-decoration: none; margin-left: 20px; font-size: 16px; transition: color 0.2s; }
+        .navbar .nav-links a:hover { color: #0056b3; }
+        .contact-container { max-width: 600px; margin: 20px auto; text-align: center; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .contact-item { margin: 20px 0; font-size: 24px; }
+        .contact-item a { color: #007bff; text-decoration: none; transition: color 0.2s; }
+        .contact-item a:hover { color: #0056b3; }
+        .contact-item i { margin-right: 10px; }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="name">Amar Chaurasiya</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <div class="contact-item">
+            <a href="tel:+917039190879"><i class="fas fa-phone"></i> +91 703-919-0879</a>
+        </div>
+        <div class="contact-item">
+            <a href="https://www.linkedin.com/in/amar-chaurasiya-163788262/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <div class="contact-item">
+            <a href="https://github.com/Amar1244" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+    </div>
+    <footer style="background-color: #007bff;">
+    <div class="footer-content">
+        <!-- Form Section -->
+        <div class="footer-form">
+            <h2>GET IN TOUCH</h2>
+            <form id="whatsappForm">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Name*" required>
+                    <input type="email" id="email" name="email" placeholder="Email Address*" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" placeholder="Enter Message*" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send on WhatsApp</button>
+            </form>
+            <div id="whatsappLinkContainer" style="margin-top: 15px; display: none;">
+                <p style="color: red;">Could not open WhatsApp automatically. Please click the link below to send your message:</p>
+                <a id="whatsappLink" target="_blank" style="color: #25D366; text-decoration: underline;">Open WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Social Links Section -->
+        <!-- <div class="footer-links">
+            <p>Made with ❤️</p>
+            <h2>Contect Number 7039190879</h2>
+            <div class="social-icons">
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:amarchaurasiya124@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div> -->
+<div class="footer-links" style="text-align: center; padding: 20px; background-color: #007bff; color: white;">
+    <!-- <p style="margin: 0; font-size: 24px;">Made with ❤️<su/p> -->
+    <div class="social-icons" style="margin-top: 10px; display: flex; flex-direction: column; align-items: center;">
+        <a href="tel:+917039190879" style="margin: 10px 0; color: white; text-decoration: none; font-size: 30px; transition: transform 0.2s;"><i class="fas fa-phone"></i></a>
+<!-- <a href="mailto:amarchaurasiya124@gmail.com" style="margin: 10px 0; color: white; text-decoration: none; font-size: 30px; transition: transform 0.2s;"><i class="fas fa-envelope"></i></a>        -->
+  <a href="https://www.linkedin.com/in/amar-chaurasiya-163788262/" target="_blank" style="margin: 10px 0; color: white; text-decoration: none; font-size: 30px; transition: transform 0.2s;"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Amar1244" target="_blank" style="margin: 10px 0; color: white; text-decoration: none; font-size: 30px; transition: transform 0.2s;"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+<style>
+    .social-icons a:hover {
+        transform: scale(1.2);
+    }
+</style>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('whatsappForm');
+        const whatsappLinkContainer = document.getElementById('whatsappLinkContainer');
+        const whatsappLink = document.getElementById('whatsappLink');
+
+        if (!form || !whatsappLinkContainer || !whatsappLink) {
+            console.error('Form or link elements not found!');
+            return;
+        }
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const whatsappNumber = '7039190879';
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill out all fields correctly.');
+                return;
+            }
+
+            const text = `New message from ${name} (${email}): ${message}`;
+            const encodedText = encodeURIComponent(text);
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+
+            try {
+                const whatsappWindow = window.open(whatsappUrl, '_blank');
+                if (!whatsappWindow || whatsappWindow.closed || typeof whatsappWindow.closed === 'undefined') {
+                    throw new Error('WhatsApp window failed to open');
+                }
+            } catch (error) {
+                console.error('Error opening WhatsApp:', error);
+                whatsappLink.href = whatsappUrl;
+                whatsappLink.textContent = whatsappUrl;
+                whatsappLinkContainer.style.display = 'block';
+            }
+        });
+    });
+</script>
+</body>
+</html>

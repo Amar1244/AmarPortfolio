@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Education Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+    .education-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .education-container h1 {
+      margin-bottom: 30px;
+      font-size: 32px;
+      color: #333;
+    }
+    .edu-box {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      padding: 30px 40px;
+      width: 400px;
+      margin: 30px 0;
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .edu-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+    .edu-box h3 {
+      margin: 10px 0 8px 0;
+      color: #007bff;
+      font-size: 24px;
+    }
+    .edu-box p {
+      margin: 6px 0;
+      color: #555;
+      font-size: 16px;
+    }
+   .line {
+    position: absolute;
+    width: 4px;
+    background: #007bff;
+    top: calc(30px + 32px + 30px + 30px + 40px); /* heading top + h1 + margin + padding + box padding */
+    bottom: 30px; /* leave space after last box */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    }
+    .view-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .view-btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="education-container">
+    <h1>Education Details</h1>
+    <div class="line"></div>
+    <hr>
+    <div class="edu-box">
+      <h3>Data Science and Artificial Intelligence </h3>
+      <p>Boston Institute of Analytics</p>
+      <p>2024 - 2025</p>
+      <button class="view-btn" onclick="window.open('link-to-your-certificate1.pdf')">View Certificate</button>
+    </div>
+
+    <div class="edu-box">
+      <h3>Bachelor of Science in Information Technology (BSC IT) </h3>
+      <p>Mumbai University</p>
+      <p>2021 - 2024</p>
+      <button class="view-btn" onclick="window.open('link-to-your-certificate2.pdf')">View Certificate</button>
+    </div>
+    <div class="edu-box">
+      <h3>Secondary Certificate</h3>
+      <p>Tolani College of Commerce (Maharashtra State Board)</p>
+      <p>2019 - 2021</p>
+      <button class="view-btn" onclick="window.open('link-to-your-certificate2.pdf')">View Certificate</button>
+    </div>
+    <div class="edu-box">
+      <h3>Secondary School Certificate</h3>
+      <p>S.T Arnols's High School (Maharashtra State Board) </p>
+      <p>2018 - 2019</p>
+      <button class="view-btn" onclick="window.open('link-to-your-certificate2.pdf')">View Certificate</button>
+    </div>
+  </div>
+
+</body>
+</html>
