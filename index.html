@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="img/favicon.png" type="image/png">
 	<title>Amar portfolio</title>
+
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -15,9 +16,15 @@
 	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- ✅ BotUI Chatbot Styles -->
+	<link rel="stylesheet" href="https://unpkg.com/botui/build/botui.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/botui/build/botui-theme-default.css">
 </head>
+
 
 <body style="background-color: aquamarine;">
 
@@ -319,8 +326,8 @@
     }
     .github-link {
       display: inline-block;
-      width: 24px;
-      height: 24px;
+      width: 44px;
+      height: 44px;
       cursor: pointer;
       text-decoration: none;
     }
@@ -349,167 +356,509 @@
     }
   </style>
   <div class="projects-grid">
-    <div class="project-card">
-      <div class="img-wrapper">
-        <img src="img/employee.png" alt="Employee Retention Prediction" class="project-img">
-      </div>
-      <h3>Employee Retention Prediction</h3>
-      <p>Built an 87%-accurate employee attrition model (Logistic Regression, Random Forest, XGBoost) with Python, Streamlit, SMOTE, and GridSearchCV for HR insights.</p>
-      <div class="button-container">
-        <button class="view-button">View</button>
-        <a href="https://github.com/Amar1244" class="github-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-      </div>
-    </div>
 
-    <div class="project-card">
-      <div class="img-wrapper">
-        <img src="img/finance.png" alt="Finance Report Dashboard" class="project-img">
-      </div>
-      <h3>Finance Report Dashboard</h3>
-      <p>The Finance Report Dashboard highlights gross sales, profit, and units sold with date filters, product/segment breakdowns, profit trends, and regional profit distribution for actionable insights.</p>
-      <div class="button-container">
-        <button class="view-button">View</button>
-        <a href="https://github.com/Amar1244" class="github-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-      </div>
+  <!-- 1. Employee Retention Prediction -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/employee.png" alt="Employee Retention Prediction" class="project-img">
     </div>
-
-    <div class="project-card">
-      <div class="img-wrapper">
-        <img src="img/heart.png" alt="Heart Disease Prediction" class="project-img">
-      </div>
-      <h3>Heart Disease Prediction</h3>
-      <p>Built and deployed a heart disease risk prediction system (Logistic Regression, Decision Tree, SVM) with 82.6% accuracy using Python, Flask, and Streamlit.</p>
-      <div class="button-container">
+    <h3>Employee Retention Prediction</h3>
+    <p>Built an 87%-accurate employee attrition model (Logistic Regression, Random Forest, XGBoost) with Python, Streamlit, SMOTE, and GridSearchCV for HR insights.</p>
+    <div class="button-container">
+      <a href="https://employeeretentionpredictiondeployed.streamlit.app/" target="_blank">
         <button class="view-button">View</button>
-        <a href="https://github.com/Amar1244" class="github-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-      </div>
+      </a>
+      <a href="https://github.com/Amar1244/Employee_Retention_Prediction_Deploy_Model_Dashboard" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
     </div>
-
-    <div class="project-card">
-      <div class="img-wrapper">
-        <img src="img/term.png" alt="Term Deposits Prediction" class="project-img">
-      </div>
-      <h3>Term Deposits Prediction</h3>
-      <p>Built a term deposit subscription prediction model (Logistic Regression, SVM, XGBoost) with 90.2% accuracy, with EDA, feature selection, and visualizations in Matplotlib/Power BI.</p>
-      <div class="button-container">
-        <button class="view-button">View</button>
-        <a href="https://github.com/Amar1244" class="github-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="img-wrapper">
-        <img src="img/Cnn.webp" alt="Digit Classification Using CNN" class="project-img">
-      </div>
-      <h3>Digit Classification Using CNN</h3>
-      <p>Built and deployed a CNN-based handwritten digit classifier (TensorFlow, Keras, Streamlit) for MNIST digit recognition.</p>
-      <div class="button-container">
-        <button class="view-button">View</button>
-        <a href="https://github.com/Amar1244" class="github-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="img-wrapper">
-        <img src="img/Aichatbot.jpeg" alt="Gen AI-Based PDF Interaction Bot" class="project-img">
-      </div>
-      <h3>Gen AI-Based PDF Interaction Bot</h3>
-      <p>Developed an AI-powered PDF interaction bot using Hugging Face's GPT-2 to retrieve and display data from PDFs.</p>
-      <div class="button-container">
-        <button class="view-button">View</button>
-        <a href="https://github.com/Amar1244" class="github-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="img-wrapper">
-        <img src="img/car.jpg" alt="Car Price Prediction" class="project-img">
-      </div>
-      <h3>Car Price Prediction</h3>
-      <p>Created a predictive model to estimate car prices based on body style, fuel type, horsepower, engine size, and other vehicle characteristics. Handled missing values, encoded categorical variables, and scaled numerical features. Used support vector machine (grid search score: 0.7465) and linear regression (RMSE: 2377.51, R²: 84.65%).</p>
-      <div class="button-container">
-        <button class="view-button">View</button>
-        <a href="https://github.com/Amar1244" class="github-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="img-wrapper">
-        <img src="img/housing.jpeg" alt="Housing Sales Prediction" class="project-img">
-      </div>
-      <h3>Housing Sales Prediction</h3>
-      <p>Built a predictive model to estimate housing prices using features like square footage, number of rooms, and location. Conducted extensive data preparation, including missing value management, categorical variable encoding, and numerical feature scaling. Achieved 95% accuracy on test data using regression techniques.</p>
-      <div class="button-container">
-        <button class="view-button">View</button>
-        <a href="https://github.com/Amar1244" class="github-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="img-wrapper">
-        <img src="img/sentiment.png" alt="Sentiment Analysis of Amazon Reviews" class="project-img">
-      </div>
-      <h3>Sentiment Analysis of Amazon Reviews</h3>
-      <p>Conducted sentiment analysis on 10,000 Amazon reviews using the VADER sentiment analysis library to classify reviews as positive or negative. Extracted insights into customer sentiment trends to enhance understanding of product feedback through efficient text processing and scoring techniques.</p>
-      <div class="button-container">
-        <button class="view-button">View</button>
-        <a href="https://github.com/Amar1244" class="github-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="img-wrapper">
-        <img src="img/stores.png" alt="Super store Summary Dashboard" class="project-img">
-      </div>
-      <h3>Superstores Sales Dashboard</h3>
-      <p>The Super Store Dashboard provides an overview of sales, quantity, profit, and delivery performance with regional filters. It includes breakdowns by segment, category, payment mode, and ship method, along with yearly sales trends and a geospatial sales map. Built in Power BI, it delivers actionable insights for business decisions</p>
-      <div class="button-container">
-        <button class="view-button">View</button>
-        <a href="https://github.com/Amar1244" class="github-link">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-    
   </div>
+
+  <!-- 2. Finance Report Dashboard -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/finance.png" alt="Finance Report Dashboard" class="project-img">
+    </div>
+    <h3>Finance Report Dashboard</h3>
+    <p>The Finance Report Dashboard highlights gross sales, profit, and units sold with date filters, product/segment breakdowns, profit trends, and regional profit distribution for actionable insights.</p>
+    <div class="button-container">
+      <a href="https://your-live-demo-link.com/finance-dashboard" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 3. Heart Disease Prediction -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/heart.jpg" alt="Heart Disease Prediction" class="project-img">
+    </div>
+    <h3>Heart Disease Prediction</h3>
+    <p>Built and deployed a heart disease risk prediction system (Logistic Regression, Decision Tree, SVM) with 82.6% accuracy using Python, Flask, and Streamlit.</p>
+    <div class="button-container">
+      <a href="https://your-live-demo-link.com/heart-disease" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244/Heart_Disease_Prediction_Deployment_Dashboard-Model-and-Data" target="_blank" class="github-link">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+</a>
+
+    </div>
+  </div>
+
+  <!-- 4. Term Deposits Prediction -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/term.png" alt="Term Deposits Prediction" class="project-img">
+    </div>
+    <h3>Term Deposits Prediction</h3>
+    <p>Built a term deposit subscription prediction model with 90.2% accuracy, using EDA, feature selection, and visualizations in Matplotlib/Power BI.</p>
+    <div class="button-container">
+      <a href="https://termdepositpredictiondeployed.streamlit.app/" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244/Amar1244-Term_Deposit_Deployed_Prediction_Model_Datasets_Deployed" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 5. Digit Classification Using CNN -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/Cnn.webp" alt="Digit Classification Using CNN" class="project-img">
+    </div>
+    <h3>Digit Classification Using CNN</h3>
+    <p>Built and deployed a CNN-based handwritten digit classifier for MNIST digit recognition using TensorFlow and Keras.</p>
+    <div class="button-container">
+      <a href="https://your-live-demo-link.com/cnn-digit-classifier" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 6. Gen AI-Based PDF Interaction Bot -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/Aichatbot.jpeg" alt="Gen AI-Based PDF Interaction Bot" class="project-img">
+    </div>
+    <h3>Gen AI-Based PDF Interaction Bot</h3>
+    <p>Developed an AI-powered PDF interaction bot using Hugging Face's GPT-2 to retrieve and display data from PDFs.</p>
+    <div class="button-container">
+      <a href="https://your-live-demo-link.com/pdf-chatbot" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 7. Car Price Prediction -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/car.jpg" alt="Car Price Prediction" class="project-img">
+    </div>
+    <h3>Car Price Prediction</h3>
+    <p>Created a predictive model to estimate car prices using SVM and Linear Regression with feature engineering and preprocessing.</p>
+    <div class="button-container">
+      <a href="https://your-live-demo-link.com/car-price" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 8. Housing Sales Prediction -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/housing.jpeg" alt="Housing Sales Prediction" class="project-img">
+    </div>
+    <h3>Housing Sales Prediction</h3>
+    <p>Built a predictive model to estimate housing prices using regression and 95% accuracy on test data after preprocessing and EDA.</p>
+    <div class="button-container">
+      <a href="https://your-live-demo-link.com/housing-predictor" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 9. Sentiment Analysis of Amazon Reviews -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/sentiment.png" alt="Sentiment Analysis of Amazon Reviews" class="project-img">
+    </div>
+    <h3>Sentiment Analysis of Amazon Reviews</h3>
+    <p>Used VADER sentiment analysis to classify 10K+ Amazon reviews as positive or negative with visual insights into sentiment trends.</p>
+    <div class="button-container">
+      <a href="https://your-live-demo-link.com/amazon-sentiment" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 10. Superstores Sales Dashboard -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/stores.png" alt="Superstore Sales Dashboard" class="project-img">
+    </div>
+    <h3>Superstores Sales Dashboard</h3>
+    <p>Power BI dashboard showcasing product sales, profit, and shipping performance with filters, trends, and regional breakdowns.</p>
+    <div class="button-container">
+      <a href="https://your-live-demo-link.com/superstore-dashboard" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- 11. Textro ChatBot -->
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/Chatbot.png" alt="Textro ChatBot" class="project-img">
+    </div>
+    <h3>Textro ChatBot</h3>
+    <p>AI-powered chatbot using Gemini 2.0 for real-time NLP conversation with context-aware responses and clean UI.</p>
+    <div class="button-container">
+      <a href="https://your-live-demo-link.com/textro-ai-chatbot" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244/Textro-ChatBot" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
+    </div>
+  </div>
+  <div class="project-card">
+    <div class="img-wrapper">
+      <img src="img/Aimail.jpeg" alt="Textro ChatBot" class="project-img">
+    </div>
+    <h3>OneClick AI Mail</h3>
+    <p>AI-powered chatbot using Gemini 2.0 for real-time NLP conversation with context-aware responses and clean UI.</p>
+    <div class="button-container">
+      <a href="https://your-live-demo-link.com/textro-ai-chatbot" target="_blank">
+        <button class="view-button">View</button>
+      </a>
+      <a href="https://github.com/Amar1244/Textro-ChatBot/tree/main/Text%20to%20Text%20Ai%20Model" class="github-link" target="_blank">
+        <!-- GitHub SVG -->
+         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000">
+      <path d="M12 .297c-6.63 0-12 5.373-12 12 
+        0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+        0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61 
+        C4.422 18.07 3.633 17.7 3.633 17.7 
+        c-1.087-.744.084-.729.084-.729 
+        1.205.084 1.838 1.236 1.838 1.236 
+        1.07 1.834 2.807 1.304 3.492.997 
+        .107-.775.418-1.305.76-1.605 
+        -2.665-.3-5.466-1.332-5.466-5.93 
+        0-1.31.465-2.38 1.235-3.22 
+        -.135-.303-.54-1.523.105-3.176 
+        0 0 1.005-.322 3.3 1.23 
+        .96-.267 1.98-.399 3-.405 
+        1.02.006 2.04.138 3 .405 
+        2.28-1.552 3.285-1.23 3.285-1.23 
+        .645 1.653.24 2.873.12 3.176 
+        .765.84 1.23 1.91 1.23 3.22 
+        0 4.61-2.805 5.625-5.475 5.92 
+        .42.36.81 1.096.81 2.22 
+        0 1.606-.015 2.896-.015 3.286 
+        0 .315.21.69.825.57 
+        C20.565 22.092 24 17.592 24 12.297 
+        c0-6.627-5.373-12-12-12"/>
+    </svg>
+      </a>
+    </div>
+  </div>
+</div>
 </section>
 	</section>
 	<!--================End Projects Area =================-->
@@ -733,6 +1082,29 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/theme.js"></script>
+  <!-- ✅ BotUI Chatbot Scripts -->
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/botui/build/botui.min.js"></script>
+
+<!-- ✅ Chatbot UI Box -->
+<div id="botui-app">
+  <bot-ui></bot-ui>
+</div>
+
+<script>
+  var botui = new BotUI('botui-app');
+
+  botui.message.add({ content: 'Hi! What is your name?' }).then(function () {
+    return botui.action.text({ action: { placeholder: 'Your name' } });
+  }).then(function (res) {
+    let userName = res.value;
+    return botui.message.add({ content: `Nice to meet you, ${userName}. What’s your email?` });
+  }).then(function () {
+    return botui.action.text({ action: { placeholder: 'Your email' } });
+  }).then(function (res) {
+    botui.message.add({ content: "Thanks! We’ll be in touch." });
+  });
+</script>
 </body>
 
 </html>

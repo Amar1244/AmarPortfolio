@@ -3484,14 +3484,3 @@ footer {
 .social-icons a:hover {
     color: #fff; /* Change icon color on hover */
 }
-
-.typing-wrapper {
-   font-size: 24px;
-   font-weight: bold;
-   color: black;
-   font-family: 'Courier New', Courier, monospace;
-   white-space: nowrap;
-   overflow: hidden;
-   width: fit-content;
-   margin: 0 auto 10px auto;
- }

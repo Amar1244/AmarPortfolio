@@ -29,38 +29,3 @@
             });
         });
     });
-
-
-const roles = ["AI Developer", "Data Analyst", "Data Scientist"];
-const typedText = document.getElementById("typed-text");
-const typingDelay = 100;
-const erasingDelay = 60;
-const nextTextDelay = 1500;
-
-let roleIndex = 0;
-let charIndex = 0;
-
-function type() {
-  if (charIndex < roles[roleIndex].length) {
-    typedText.textContent += roles[roleIndex].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, typingDelay);
-  } else {
-    setTimeout(erase, nextTextDelay);
-  }
-}
-
-function erase() {
-  if (charIndex > 0) {
-    typedText.textContent = roles[roleIndex].substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(erase, erasingDelay);
-  } else {
-    roleIndex = (roleIndex + 1) % roles.length;
-    setTimeout(type, typingDelay);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  if (roles.length) setTimeout(type, nextTextDelay);
-});
