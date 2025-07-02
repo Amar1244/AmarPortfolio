@@ -26,6 +26,7 @@ Author E-mail: naimlasker@gmail.com
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 body {
+  overflow-x: hidden;
   line-height: 26px;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
